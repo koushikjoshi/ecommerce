@@ -30,7 +30,6 @@ const StyledNavbar = styled.header`
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  background-color: lightblue;
   height: 80px;
   font-family: "Brush Script MT", cursive;
   font-style: normal;
