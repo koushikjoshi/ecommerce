@@ -1,6 +1,8 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Dummy JSON data
 products = [
@@ -166,6 +168,10 @@ products = [
   }
 ]
 
+@app.route("/", methods=["GET"])
+def home():
+    return "<h2>Products</h2>"
+
 # Endpoint to fetch the product list
 @app.route("/api/products", methods=["GET"])
 def get_products():
@@ -179,6 +185,6 @@ def get_product(product_id):
         return jsonify({"error": "Product not found"}), 404
     return jsonify(product)
 
-
-app.run(debug=True)
+if __name__ == "__main__":
+  app.run(debug=True)
 

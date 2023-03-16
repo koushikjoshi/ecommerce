@@ -5,6 +5,9 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <div className="products-filters">
+        <p>Products:</p>
+      </div>
     </div>
   );
 }
